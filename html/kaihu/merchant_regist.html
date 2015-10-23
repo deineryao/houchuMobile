@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>商户注册</title>
+	<link rel="stylesheet" href="../../css/common.css" />
+</head>
+<body>
+	<header class="wrap-header">
+		<div class="nav-wrap-left">
+			<a class="back" href="javascript:history.back(-1)">
+				<i class="text-icon icon-back"></i>
+			</a>
+		</div>
+		<span class="nav-header">商户注册</span>
+	</header>
+	<section class="mer-box">
+		<h3 class="shanghu-h">商户信息</h3>
+		<div class="mer-list">
+			<label>商户名称</label>
+			<input type="text" placeholder="请输入商户名称" />
+		</div>
+		<div class="mer-list">
+			<label>所在地区</label>
+			<div class="select-wrap">
+				<select>
+	                <option value="1" selected="selected">东城区</option>
+	                <option value="2">西城区</option>
+	                <option value="3">朝阳区</option>
+	                <option value="4">海淀区</option>
+	                <option value="5">丰台区</option>
+	                <option value="6">石景山区</option>
+	                <option value="7">门头沟区</option>
+	                <option value="8">房山区</option>
+	                <option value="9">大兴区</option>
+	                <option value="10">通州区</option>
+	                <option value="11">顺义区</option>
+	                <option value="12">昌平区</option>
+	                <option value="13">平谷区</option>
+	                <option value="14">怀柔区</option>
+	                <option value="15">密云县</option>
+	                <option value="16">延庆县</option>
+	            </select>
+	        </div>    
+		</div>
+		<div class="mer-list">
+			<label>详细地址</label>
+			<input type="text" placeholder="请输入详细地址" />
+		</div>
+		<div class="mer-list">
+			<label>最早送达</label>
+			<div class="select-wrap">
+				<select>
+					<option selected="selected">上午7：00</option>
+					<option>上午8：00</option>
+					<option>上午9：00</option>
+				</select>
+			</div>	
+		</div>
+		<div class="mer-list">
+			<label>最晚送达</label>
+			<div class="select-wrap">
+				<select>
+					<option>上午9：00</option>
+					<option selected="selected">上午10：00</option>
+				</select>
+			</div>	
+		</div>
+	</section>
+	<div class="public-bottom-btn submit-btn">
+		<button class="fix-btn">下一步</button>
+	</div>
+	<script type="text/javascript" src="../../js/jquery-1.11.1.min.js" ></script>
+	<script>
+		$(".fix-btn").click(function(){
+			window.location.href="addManager.html?level=000"
+		})
+	</script>
+</body>
+</html>

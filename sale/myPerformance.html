@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>我的业绩</title>
+	<link rel="stylesheet" href="../css/common.css" />
+	<link rel="stylesheet" href="../css/date.css" />
+</head>
+<body class="order-bg">
+	<header class="wrap-header">
+		<div class="nav-wrap-left">
+			<a class="back" href="javascript:history.back(-1)">
+				<i class="text-icon icon-back"></i>
+			</a>
+		</div>
+		<span class="nav-header">我的业绩</span>
+	</header>
+	<div class="scroll-wrap">
+		<section>
+			<div class="yeji-date mt16">
+				<label>当前日期：</label>
+				<div class="time-box"><input type="text" id="beginTime" class="selectTime" /></div>
+				<div style="display: -webkit-box;-webkit-box-flex: 1;"></div>
+			</div>
+			<div class="yeji-top">
+				<div class="zongliang">
+					<label>订单总量：</label>
+					<span class="ff5000">1500</span> (件)
+				</div>
+				<div class="zongjia">
+					<label>订单总额：</label>
+					<span class="ff5000">3500.88</span> (元)
+				</div>
+			</div>
+			<section class="mt16">
+					<ul class="order-list yeji-list">
+						<li>
+							<div><label>订单金额：</label><span class="ff5000">203</span>元</div>
+							<div><label>下单时间：</label><span>2015-9-24 15:46:12</span></div>
+							<div><label>商户名：</label><span>莫夫山泉旗舰店</span></div>	
+						</li>
+						<li>
+							<div><label>订单金额：</label><span class="ff5000">203</span>元</div>
+							<div><label>下单时间：</label><span>2015-9-24 15:46:12</span></div>
+							<div><label>商户名：</label><span>莫夫山泉旗舰店</span></div>	
+						</li>
+						<li>
+							<div><label>订单金额：</label><span class="ff5000">203</span>元</div>
+							<div><label>下单时间：</label><span>2015-9-24 15:46:12</span></div>
+							<div><label>商户名：</label><span>莫夫山泉旗舰店</span></div>	
+						</li>
+						<li>
+							<div><label>订单金额：</label><span class="ff5000">203</span>元</div>
+							<div><label>下单时间：</label><span>2015-9-24 15:46:12</span></div>
+							<div><label>商户名：</label><span>莫夫山泉旗舰店</span></div>	
+						</li>
+					</ul>
+				</section>
+		</section>
+	</div>
+	<div id="datePlugin"></div>
+	<script type="text/javascript" src="../js/jquery-1.11.1.min.js" ></script>
+	<script type="text/javascript" src="../js/public.js" ></script>
+	<script type="text/javascript" src="../js/date.js" ></script>
+	<script type="text/javascript" src="../js/iscroll.js" ></script>
+	<script>
+		$(function(){
+			$('#beginTime').val(getCurrentTime());
+			$('#beginTime').date();
+		});
+		
+	</script>
+</body>
+</html>

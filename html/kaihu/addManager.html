@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>创建账号</title>
+	<link rel="stylesheet" href="../../css/common.css" />
+</head>
+<body>
+	<header class="wrap-header">
+		<div class="nav-wrap-left">
+			<a class="back" href="javascript:history.back(-1)">
+				<i class="text-icon icon-back"></i>
+			</a>
+		</div>
+		<span class="nav-header">创建账号</span>
+	</header>
+	<section class="mer-box">
+		<h3 class="manage-h">账号信息</h3>
+		<div class="mer-list">
+			<label>联系人</label>
+			<input type="text" placeholder="请输入联系人姓名" />
+		</div>
+		<div class="mer-list">
+			<label>手机号</label>
+			<input type="text" placeholder="请输入联系人手机号" />
+		</div>
+		<div class="mer-list">
+			<label>所属角色</label>
+			<div class="select-wrap">
+				<select>
+					<option selected="selected">采购员</option>
+					<option>收货员</option>
+					<option>门店负责人</option>
+					<option>运营总监</option>
+					<option>采购总监</option>
+				</select>
+			</div>	
+		</div>
+		<div class="mer-list">
+			<label>登录密码</label>
+			<input type="password" placeholder="请设置登录密码" />
+		</div>
+		<div class="mer-list">
+			<label>确认密码</label>
+			<input type="password" placeholder="请再次输入密码" />
+		</div>
+	</section>
+	<div class="public-bottom-btn submit-btn">
+		<button class="fix-btn">提交</button>
+	</div>
+	<script type="text/javascript" src="../../js/jquery-1.11.1.min.js" ></script>
+	<script type="text/javascript" src="../../js/public.js" ></script>
+	<script>
+		var level = getParams()['level'];
+		$(".fix-btn").click(function(){
+			if(!level){
+				return;
+			}
+			if(level=='000'){
+				window.location.href = "success.html";
+			}else if(level=='001'){
+				//window.location.href="one-level-unit.html";	
+			}else if(level=='002'){
+				window.location.href = "merchant_detail.html";
+			}
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>我的评价</title>
+	<link rel="stylesheet" href="../../css/common.css" />
+</head>
+<body class="order-bg">
+	<header class="wrap-header">
+		<div class="nav-wrap-left">
+			<a class="back" href="javascript:history.back(-1)">
+				<i class="text-icon icon-back"></i>
+			</a>
+		</div>
+		<span class="nav-header">我的评价</span>
+	</header>
+	<div class="average">
+		<div class="barline">
+			<div class="charts" w="88" style="width: 0%;"></div>
+		</div>
+		<div class="percent">历史综合平均分:<span class="ff5000"><b>80</b></span>分</div>
+	</div>	
+	<div class="scroll-wrap">
+		<section class="honor-box">
+			<ul class="order-list">
+				<li>
+					<p class="date">2015-9-11 17:46:12</p>
+					<p class="score">综合评分：<span class="ff5000">18分</span></p>
+					<div class="score-content">
+						<label>评分内容：</label>
+						<p>你把我灌醉，你把我灌醉你把我灌醉，你把我灌醉，你把我灌醉，你把我灌醉你把我灌醉你把我灌醉你把我灌醉你把我灌醉你把我灌醉</p>
+					</label>
+				</li>
+				<li>
+					<p class="date">2015-9-11 17:46:12</p>
+					<p class="score">综合评分：<span class="ff5000">18分</span></p>
+					<div class="score-content">
+						<label>评分内容：</label>
+						<p>你把我灌醉，你把我灌醉你把我灌醉，你把我灌醉，你把我灌醉，你把我灌醉你把我灌醉你把我灌醉你把我灌醉你把我灌醉你把我灌醉</p>
+					</label>
+				</li>
+				<li>
+					<p class="date">2015-9-11 17:46:12</p>
+					<p class="score">综合评分：<span class="ff5000">18分</span></p>
+					<div class="score-content">
+						<label>评分内容：</label>
+						<p>你把我灌醉，你把我灌醉你把我灌醉，你把我灌醉，你把我灌醉，你把我灌醉你把我灌醉你把我灌醉你把我灌醉你把我灌醉你把我灌醉</p>
+					</label>
+				</li>
+			</ul>
+		</section>
+	</div>
+	<script type="text/javascript" src="../../js/jquery-1.11.1.min.js" ></script>
+	<script>
+		$(function(){
+			var init_width = parseInt($('.charts').attr('w')); 
+			$(".charts").animate({width:init_width+"%"},1000);
+			var si = window.setInterval(function(){
+				var a = $(".charts").width();
+				var b = $(".barline").width();
+				var c= (a/b*100).toFixed(0);
+				$(".percent span > b").text(c);
+				if(c==init_width){
+					clearInterval(si);
+				}
+			});
+		})
+	</script>
+</body>
+</html>

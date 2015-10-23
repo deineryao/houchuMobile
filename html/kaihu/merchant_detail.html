@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>商户详情</title>
+	<link rel="stylesheet" href="../../css/common.css" />
+</head>
+<body>
+	<header class="wrap-header">
+		<div class="nav-wrap-left">
+			<a class="back" href="javascript:history.back(-1)">
+				<i class="text-icon icon-back"></i>
+			</a>
+		</div>
+		<span class="nav-header">商户详情</span>
+	</header>
+	<nav class="order-nav order-nav-dg">
+		<ul>
+			<li class="cur-dg">商户信息</li>
+			<li>账号信息</li>
+		</ul>
+	</nav>
+	<section class="level-cont bt16">
+		<section class="mer-box">
+		<div class="mer-list">
+			<label>商户名称</label>
+			<input type="text" placeholder="请输入商户名称" value="易中医旗舰店" />
+		</div>
+		<div class="mer-list">
+			<label>所在地区</label>
+			<div class="select-wrap">
+				<select>
+	                <option selected="selected">东城区</option>
+	                <option>西城区</option>
+	                <option>朝阳区</option>
+	                <option>海淀区</option>
+	                <option>丰台区</option>
+	                <option>石景山区</option>
+	                <option>门头沟区</option>
+	                <option>房山区</option>
+	                <option>大兴区</option>
+	                <option>通州区</option>
+	                <option>顺义区</option>
+	                <option>昌平区</option>
+	                <option>平谷区</option>
+	                <option>怀柔区</option>
+	                <option>密云县</option>
+	                <option>延庆县</option>
+	            </select>
+	        </div>    
+		</div>
+		<div class="mer-list">
+			<label>详细地址</label>
+			<input type="text" placeholder="请输入详细地址" value="海淀区育新地铁站" />
+		</div>
+		<div class="mer-list">
+			<label>最早送达</label>
+			<div class="select-wrap">
+				<select>
+					<option selected="selected">上午7：00</option>
+					<option>上午8：00</option>
+					<option>上午9：00</option>
+				</select>
+			</div>	
+		</div>
+		<div class="mer-list">
+			<label>最晚送达</label>
+			<div class="select-wrap">
+				<select>
+					<option>上午9：00</option>
+					<option selected="selected">上午10：00</option>
+				</select>
+			</div>	
+		</div>
+	</section>
+	<div class="public-bottom-btn submit-btn">
+		<button class="fix-btn add-dw-btn">保存信息</button>
+	</div>
+	</section>
+	<section class="level-cont bt16" style="display: none;">
+		<ul class="level-box">
+			<li><a href="account_detail.html"><span>18566209430</span><span>老板</span></a></li>
+			<li><a href="account_detail.html"><span>18566209430</span><span>boss</span></a></li>
+			<li><a href="account_detail.html"><span>18566209430</span><span>美女</span></a></li>
+			<li><a href="account_detail.html"><span>18566209430</span><span>野兽</span></a></li>
+			<li><a href="account_detail.html"><span>18566209430</span><span>猴子</span></a></li>
+		</ul>
+	<div class="public-bottom-btn submit-btn">
+		<button class="fix-btn add-gly-btn">新增账号</button>
+	</div>
+	</section>
+	<script type="text/javascript" src="../../js/jquery-1.11.1.min.js" ></script>
+	<script type="text/javascript" src="../../js/public.js" ></script>
+	<script>
+		$(".order-nav li").on("click",function(e){
+			$(".order-nav li").removeClass("cur-dg");
+			$(this).addClass("cur-dg");
+			var index = $(".order-nav li").index($(this));
+			$(".level-cont").css("display","none");
+			$($(".level-cont")[index]).css("display","block");
+		});
+		$(".add-gly-btn").click(function(){
+			window.location.href = 'addManager.html?level=002';
+		});
+		$(".add-dw-btn").click(function(){
+			window.location.href = 'department_regist.html?departmentId='+departmentId;
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>待办订单</title>
+	<link rel="stylesheet" href="../../css/common.css" />
+</head>
+<body class="order-bg">
+	<header class="wrap-header">
+		<div class="nav-wrap-left">
+			<a class="back" href="javascript:history.back(-1)">
+				<i class="text-icon icon-back"></i>
+			</a>
+		</div>
+		<span class="nav-header">待办订单</span>
+	</header>
+	<nav class="order-nav">
+		<ul>
+			<li>全部</li>
+			<li data-id="1" class="cur">收货</li>
+			<li data-id="2">出发</li>
+			<li data-id="3">送达</li>
+			<li data-id="4">交接</li>
+		</ul>
+	</nav>
+	<div class="scroll-wrap">
+		<section class="order-cont">
+			<ul class="order-list">
+				<li data-id="1">
+					<div class="o-l-tit">
+						<div class="tcont">
+							<div class="ico"><img src="../../img/test.png"></div>
+							<div class="contact"><p>三只松鼠旗舰店</p></div>
+							<div class="state"><span>待收货</span></div>
+						</div>
+					</div>
+					<div class="o-l-content">
+						<p style="color: #666;">配送地址：北京 北京市 海淀区 西三旗街道 建材城东路你把我灌醉商城1106室 </p>
+					</div>
+					<div class="o-l-total">
+						<div class="cont">  <span>共<b>1</b>件商品</span>   <span>合计:<b>￥1199.00</b></span></div>
+					</div>
+					<div class="o-l-btn">
+						<!--<button>取消订单</button>-->
+						<button class="color-btn">收货确认</button>
+					</div>
+				</li>
+				<li data-id="2">
+					<div class="o-l-tit">
+						<div class="tcont">
+							<div class="ico"><img src="../../img/test.png"></div>
+							<div class="contact"><p>三只松鼠旗舰店</p></div>
+							<div class="state"><span>待发货</span></div>
+						</div>
+					</div>
+					<div class="o-l-content">
+						<p style="color: #666;">配送地址：北京 北京市 海淀区 西三旗街道 建材城东路你把我灌醉商城1106室 </p>
+					</div>
+					<div class="o-l-total">
+						<div class="cont">  <span>共<b>1</b>件商品</span>   <span>合计:<b>￥1199.00</b></span></div>
+					</div>
+					<div class="o-l-btn">
+						<!--<button>取消订单</button>-->
+						<button class="color-btn flag">确认出发</button>
+					</div>
+				</li>
+				<li data-id="3">
+					<div class="o-l-tit">
+						<div class="tcont">
+							<div class="ico"><img src="//img.alicdn.com/tps/i1/TB1PsTiHVXXXXcXXXXXsYU.HpXX-55-64.png"></div>
+							<div class="contact"><p>三只松鼠旗舰店</p></div>
+							<div class="state"><span>配送中</span></div>
+						</div>
+					</div>
+					<div class="o-l-content">
+						<p style="color: #666;">配送地址：北京 北京市 海淀区 西三旗街道 建材城东路你把我灌醉商城1106室 </p>
+					</div>
+					<div class="o-l-total">
+						<div class="cont">  <span>共<b>1</b>件商品</span>   <span>合计:<b>￥1199.00</b></span></div>
+					</div>
+					<div class="o-l-btn">
+						<!--<button>取消订单</button>-->
+						<button class="color-btn flag">确认送达</button>
+					</div>
+				</li>
+				<li data-id="4">
+					<div class="o-l-tit">
+						<div class="tcont">
+							<div class="ico"><img src="//img.alicdn.com/tps/i1/TB1PsTiHVXXXXcXXXXXsYU.HpXX-55-64.png"></div>
+							<div class="contact"><p>三只松鼠旗舰店</p></div>
+							<div class="state"><span>待交接</span></div>
+						</div>
+					</div>
+					<div class="o-l-content">
+						<p style="color: #666;">配送地址：北京 北京市 海淀区 西三旗街道 建材城东路你把我灌醉商城1106室 </p>
+					</div>
+					<div class="o-l-total">
+						<div class="cont">  <span>共<b>1</b>件商品</span>   <span>合计:<b>￥1199.00</b></span></div>
+					</div>
+					<div class="o-l-btn">
+						<!--<button>取消订单</button>-->
+						<button class="color-btn">货品交接</button>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<section class="order-cont" style="display: block;">
+			<ul class="order-list">
+				<li data-id="1">
+					<div class="o-l-tit">
+						<div class="tcont">
+							<div class="ico"><img src="//img.alicdn.com/tps/i1/TB1PsTiHVXXXXcXXXXXsYU.HpXX-55-64.png"></div>
+							<div class="contact"><p>三只松鼠旗舰店</p></div>
+							<div class="state"><span>待收货</span></div>
+						</div>
+					</div>
+					<div class="o-l-content">
+						<p style="color: #666;">配送地址：北京 北京市 海淀区 西三旗街道 建材城东路你把我灌醉商城1106室 </p>
+					</div>
+					<div class="o-l-total">
+						<div class="cont">  <span>共<b>1</b>件商品</span>   <span>合计:<b>￥1199.00</b></span></div>
+					</div>
+					<div class="o-l-btn">
+						<!--<button>取消订单</button>-->
+						<button class="color-btn">收货确认</button>
+					</div>
+				</li>
+				<li data-id="1">
+					<div class="o-l-tit">
+						<div class="tcont">
+							<div class="ico"><img src="//img.alicdn.com/tps/i1/TB1PsTiHVXXXXcXXXXXsYU.HpXX-55-64.png"></div>
+							<div class="contact"><p>三只松鼠旗舰店</p></div>
+							<div class="state"><span>待收货</span></div>
+						</div>
+					</div>
+					<div class="o-l-content">
+						<p style="color: #666;">配送地址：北京 北京市 海淀区 西三旗街道 建材城东路你把我灌醉商城1106室 </p>
+					</div>
+					<div class="o-l-total">
+						<div class="cont">  <span>共<b>1</b>件商品</span>   <span>合计:<b>￥1199.00</b></span></div>
+					</div>
+					<div class="o-l-btn">
+						<!--<button>取消订单</button>-->
+						<button class="color-btn">收货确认</button>
+					</div>
+				</li>
+			</ul>			
+		</section>
+		<section class="order-cont">
+			<ul class="order-list">
+				<li data-id="2">
+					<div class="o-l-tit">
+						<div class="tcont">
+							<div class="ico"><img src="//img.alicdn.com/tps/i1/TB1PsTiHVXXXXcXXXXXsYU.HpXX-55-64.png"></div>
+							<div class="contact"><p>三只松鼠旗舰店</p></div>
+							<div class="state"><span>待出发</span></div>
+						</div>
+					</div>
+					<div class="o-l-content">
+						<p style="color: #666;">配送地址：北京 北京市 海淀区 西三旗街道 建材城东路你把我灌醉商城1106室 </p>
+					</div>
+					<div class="o-l-total">
+						<div class="cont">  <span>共<b>1</b>件商品</span>   <span>合计:<b>￥1199.00</b></span></div>
+					</div>
+					<div class="o-l-btn">
+						<!--<button>取消订单</button>-->
+						<button class="color-btn flag">确认出发</button>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<section class="order-cont">
+			<ul class="order-list">
+				<li data-id="3">
+					<div class="o-l-tit">
+						<div class="tcont">
+							<div class="ico"><img src="//img.alicdn.com/tps/i1/TB1PsTiHVXXXXcXXXXXsYU.HpXX-55-64.png"></div>
+							<div class="contact"><p>三只松鼠旗舰店</p></div>
+							<div class="state"><span>配送中</span></div>
+						</div>
+					</div>
+					<div class="o-l-content">
+						<p style="color: #666;">配送地址：北京 北京市 海淀区 西三旗街道 建材城东路你把我灌醉商城1106室 </p>
+					</div>
+					<div class="o-l-total">
+						<div class="cont">  <span>共<b>1</b>件商品</span>   <span>合计:<b>￥1199.00</b></span></div>
+					</div>
+					<div class="o-l-btn">
+						<!--<button>取消订单</button>-->
+						<button class="color-btn flag">确认送达</button>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<section class="order-cont">
+			<ul class="order-list">
+				<li data-id="4">
+					<div class="o-l-tit">
+						<div class="tcont">
+							<div class="ico"><img src="//img.alicdn.com/tps/i1/TB1PsTiHVXXXXcXXXXXsYU.HpXX-55-64.png"></div>
+							<div class="contact"><p>三只松鼠旗舰店</p></div>
+							<div class="state"><span>待交接</span></div>
+						</div>
+					</div>
+					<div class="o-l-content">
+						<p style="color: #666;">配送地址：北京 北京市 海淀区 西三旗街道 建材城东路你把我灌醉商城1106室 </p>
+					</div>
+					<div class="o-l-total">
+						<div class="cont">  <span>共<b>1</b>件商品</span>   <span>合计:<b>￥1199.00</b></span></div>
+					</div>
+					<div class="o-l-btn">
+						<!--<button>取消订单</button>-->
+						<button class="color-btn">货品交接</button>
+					</div>
+				</li>
+			</ul>
+		</section>
+	</div>
+	<script type="text/javascript" src="../../js/jquery-1.11.1.min.js" ></script>
+	<script type="text/javascript" src="../../js/public.js" ></script>
+	<script>
+		$(".order-nav ul").on("click",function(e){
+			if(e.target.nodeName.toLowerCase()=="li"){
+				$(e.target).siblings("li").removeClass("cur");
+				$(e.target).addClass("cur");
+				var index = $(".order-nav ul li").index($(e.target));
+				$(".order-cont").css("display","none");
+				$($(".order-cont")[index]).css("display","block");
+			}
+		});
+		
+		$(".scroll-wrap").delegate('.order-list li','click',function(e){
+			if(e.target.className=="color-btn flag"){
+				var content = $(e.target).text();
+				var hehe = new PDialog('订单是的撒的','<p style="margin:.2rem 0">'+content+'?</p>','否',function(){hehe.hide()},'是',function(){});
+				hehe.show();
+				return;
+			}
+			var state = $(this).attr("data-id");
+			window.location.href = 'order_detail.html?state='+state;
+		})
+	</script>
+</body>
+</html>

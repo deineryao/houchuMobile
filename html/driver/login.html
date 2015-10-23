@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>后厨登录系统</title>
+	<link rel="stylesheet" href="../../css/common.css" />
+</head>
+<body class="login_bg">
+	<header class="wrap-header">
+		<div class="nav-wrap-left">
+			<a class="back" href="javascript:history.back(-1)">
+				<i class="text-icon icon-back"></i>
+			</a>
+		</div>
+		<span class="nav-header">登录后厨账号</span>
+	</header>
+	<section class="wrap-login">
+		<div class="login-item login-user">
+			<input type="text" class="input-weak" id="txt-username" placeholder="手机号/用户名/邮箱" />
+		</div>
+		<div class="login-item login-password">
+			<input type="password" class="input-weak" id="txt-password" placeholder="请输入密码" />
+		</div>	
+	</section>
+	<section class="public-bottom">
+		<button class="fix-btn">登录</button>
+	</section>
+	<script>
+		var b = document.getElementsByClassName("fix-btn");
+		b[0].onclick = function(){
+			window.location.href = 'order_daiban.html'
+		}
+	</script>
+</body>
+</html>

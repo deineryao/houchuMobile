@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>订单详情</title>
+	<link rel="stylesheet" href="../../css/common.css" />
+</head>
+<body class="order-bg">
+	<header class="wrap-header">
+		<div class="nav-wrap-left">
+			<a class="back" href="javascript:history.back(-1)">
+				<i class="text-icon icon-back"></i>
+			</a>
+		</div>
+		<span class="nav-header">订单详情</span>
+	</header>
+	<div class="scroll-wrap">
+		<section class="detail-cont">
+			<ul class="order-list">
+				<li>
+					<div class="o-l-tit o-l-address" style="border-bottom: 1px solid #E7E7E7;">
+						<div class="tcont">
+							<div class="ico"><img src="../../img/test.png"></div>
+							<div class="contact"><p>三只松鼠旗舰店</p></div>
+						</div>
+					</div>
+					<div class="o-l-tit o-l-address">
+						<div class="tcont">
+							<div class="contact"><p>联系人：张学友</p></div>
+							<div class="phone"><a href="tel:13901190988">13901190988</a></div>
+						</div>
+					</div>
+					<div class="user-address o-l-address">
+						<p>商家地址：北京市 北京市 昌平区回龙观龙旗广场2后楼1106室</p>
+					</div>
+				</li>
+				<li>
+					<ul class="detail-box">
+						<li>
+							<div><span>小白菜(带泥)</span><span class="fr">20 x 5.00 元/捆</span></div>
+							<div class="clearfix">
+								<div class="icon-tit fl">
+									<span class="icon-tit-point"><p>订</p></span><b>20</b>
+									<span class="icon-tit-point bgff500"><p>出</p></span><b>20</b>
+								</div>
+								<div class="detail-box-btn fr" >
+									<button class="tui-btn">退货</button>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div><span>小白菜(洗净)</span><span class="fr">20 x 5.00 元/捆</span></div>
+							<div class="clearfix">
+								<div class="icon-tit fl">
+									<span class="icon-tit-point"><p>订</p></span><b>22</b>
+									<span class="icon-tit-point bgff500"><p>出</p></span><b>22</b>
+									<span class="icon-tit-point tui"><p>退</p></span><b>2</b>
+								</div>
+								<div class="detail-box-btn fr" >
+									<button class="tui-btn">退货</button>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div><span>萝卜</span><span class="fr">2 x 3.25 元/根</span></div>
+							<div class="clearfix">
+								<div class="icon-tit fl">
+									<span class="icon-tit-point"><p>订</p></span><b>22</b>
+									<span class="icon-tit-point bgff500"><p>出</p></span><b>0</b>
+									<span class="icon-tit-point bu"><p>补</p></span><b>2</b>
+								</div>
+								<div class="detail-box-btn fr" >
+									<button class="huan-btn">补货</button>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="o-l-total">
+						<div class="cont">  <span>共<b class="ff5000">42</b>件商品</span>   <span class="fr">合计:<b class="ff5000">￥206.50</b></span>  </div>
+					</div>
+				</li>
+				<li>
+					<div class="order-box">
+						<p>订单编号：95279527</p>
+						<p>订单金额：￥206.50</p>
+						<p>订单日期：2015-9-8 15:21:25</p>
+					</div>
+				</li>
+			</ul>
+		</section>
+	</div>
+	<div class="public-bottom-btn submit-btn">
+		<button class="fix-btn">确认收货</button>
+	</div>
+	<script type="text/javascript" src="../../js/jquery-1.11.1.min.js" ></script>
+	<script type="text/javascript" src="../../js/public.js" ></script>
+	<script>
+		var state = getParams()['state'];
+		getStateResponse(state);
+		$(".order-list").click(function(e){
+			var targetName = e.target.className;
+			if(targetName=="tui-btn"){
+				window.location.href = 'tuihuo.html';
+			}
+			else if(targetName == 'huan-btn'){
+				window.location.href = 'buhuo.html';
+			}
+		});
+		function getStateResponse(state){
+			$(".detail-box-btn").hide();
+			switch(state){
+				case '1': 
+					$(".nav-header").text('收货');break;
+				case '2':
+					$(".submit-btn .fix-btn").text('确认出发');break;
+				case '3':
+					$(".submit-btn .fix-btn").text('确认送达');break;
+				case '4':
+					$(".detail-box-btn").show();
+					$(".nav-header").text('交接');
+					$(".submit-btn .fix-btn").text("交接完成");
+			}
+		}
+	</script>
+</body>
+</html>

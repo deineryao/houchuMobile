@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>投诉建议</title>
+	<link rel="stylesheet" href="css/tousu.css" />
+</head>
+<body class="tousu">
+	<header class="nav-header">
+		<div class="nav-header-left">
+			<a class="back" href="javascript:history.back(-1)">
+				<i class="text-icon icon-back"></i>
+			</a>
+		</div>
+		<span class="nav-text">投诉列表</span>
+		<a href="complaint_add.html" class="nav-add">新增</a>
+	</header>
+	<div class="scroll-wrap">
+		<section class="order-cont">
+			<ul class="order-list">
+				<li>
+					<div class="o-l-tit">
+						<div class="tcont">
+							<div class="contact"><p>2015-9-23 18:17:15</p></div>
+							<div class="state"><span>已处理</span></div>
+						</div>
+					</div>
+					<div class="o-l-content">
+						<p class="text-p">越渴望见面然后发现，中间隔著那十年，我想见的笑脸 只有怀念，不懂 怎去再聊天；像我在往日还未抽烟，不知你怎麼变迁，似等了一百年 忽已明白，即使再见面 成熟地表演 不如不见</p>
+					</div>
+					<div class="o-l-total clearfix">
+						<div class="cont fl">投诉类型：<span class="lvzi">货多</span></div>
+						<div class="cont fr">投诉人：<span class="lvzi">张学友</span></div>
+					</div>
+				</li>
+				<li>
+					<div class="o-l-tit">
+						<div class="tcont">
+							<div class="contact"><p>2015-9-23 18:17:15</p></div>
+							<div class="state"><span>已完成</span></div>
+						</div>
+					</div>
+					<div class="o-l-content">
+						<p class="text-p">越渴望见面然后发现，中间隔著那十年，我想见的笑脸 只有怀念，不懂 怎去再聊天；像我在往日还未抽烟，不知你怎麼变迁，似等了一百年 忽已明白，即使再见面 成熟地表演 不如不见</p>
+					</div>
+					<div class="o-l-total clearfix">
+						<div class="cont fl">投诉类型：<span class="lvzi">缺货</span></div>
+						<div class="cont fr">投诉人：<span class="lvzi">张学友</span></div>
+					</div>
+				</li>
+				<li>
+					<div class="o-l-tit">
+						<div class="tcont">
+							<div class="contact"><p>2015-9-23 18:17:15</p></div>
+							<div class="state"><span>已处理</span></div>
+						</div>
+					</div>
+					<div class="o-l-content">
+						<p class="text-p">越渴望见面然后发现，中间隔著那十年，我想见的笑脸 只有怀念，不懂 怎去再聊天；像我在往日还未抽烟，不知你怎麼变迁，似等了一百年 忽已明白，即使再见面 成熟地表演 不如不见</p>
+					</div>
+					<div class="o-l-total clearfix">
+						<div class="cont fl">投诉类型：<span class="lvzi">司机</span></div>
+						<div class="cont fr">投诉人：<span class="lvzi">张学友</span></div>
+					</div>
+				</li>
+			</ul>			
+		</section>
+	</div>
+	
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+	<script>
+		$(".order-list").delegate("li","click",function(){
+			window.location.href = 'complaint_detail.html';
+		});
+	</script>
+</body>
+</html>

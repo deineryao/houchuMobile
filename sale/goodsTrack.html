@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>货单跟踪</title>
+	<link rel="stylesheet" href="../css/common.css" />
+	<link rel="stylesheet" href="../css/date.css" />
+</head>
+<body class="order-bg">
+	<header class="wrap-header">
+		<div class="nav-wrap-left">
+			<a class="back" href="javascript:history.back(-1)">
+				<i class="text-icon icon-back"></i>
+			</a>
+		</div>
+		<span class="nav-header">货单跟踪</span>
+	</header>
+	<div class="scroll-wrap">
+		<div class="yeji-date mt16">
+			<label>当前日期：</label>
+			<div class="time-box"><input type="text" id="beginTime" class="selectTime" /></div>
+			<div style="display: -webkit-box;-webkit-box-flex: 1;"></div>
+		</div>
+		<section class="mt16">
+			<ul class="order-list track-list">
+				<li>
+					<div class="track-div clearfix">
+						<b class="tit fl"></b>
+						<span class="fl">完达山矿泉水哇哈哈</span>
+						<span class="fr">2015-9-24 16:21:26</span>
+					</div>
+					<ul class="caozuo-list">
+						<li><span>2015-9-24 16:28:58</span><span>张学友</span><span>下单</span></li>
+						<li><span>2015-9-24 16:28:58</span><span>小泽玛利亚</span><span>回收</span></li>
+						<li><span>2015-9-24 16:28:58</span><span>张学</span><span>发货</span></li>
+						<li><span>2015-9-24 16:28:58</span><span>张友</span><span>完成</span></li>
+					</ul>
+				</li>
+				<li>
+					<div class="track-div clearfix">
+						<b class="tit fl"></b>
+						<span class="fl">完达山矿泉水哇哈哈</span>
+						<span class="fr">2015-9-24 16:21:26</span>
+					</div>
+					<ul class="caozuo-list">
+						<li><span>2015-9-24 16:28:58</span><span>张学友</span><span>下单</span></li>
+						<li><span>2015-9-24 16:28:58</span><span>小泽玛利亚</span><span>回收</span></li>
+						<li><span>2015-9-24 16:28:58</span><span>张学</span><span>发货</span></li>
+						<li><span>2015-9-24 16:28:58</span><span>张友</span><span>完成</span></li>
+					</ul>
+				</li>
+				<li>
+					<div class="track-div clearfix">
+						<b class="tit fl"></b>
+						<span class="fl">完达山矿泉水哇哈哈</span>
+						<span class="fr">2015-9-24 16:21:26</span>
+					</div>
+					<ul class="caozuo-list">
+						<li><span>2015-9-24 16:28:58</span><span>张学友</span><span>下单</span></li>
+						<li><span>2015-9-24 16:28:58</span><span>小泽玛利亚</span><span>回收</span></li>
+						<li><span>2015-9-24 16:28:58</span><span>张学</span><span>发货</span></li>
+						<li><span>2015-9-24 16:28:58</span><span>张友</span><span>完成</span></li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+	</div>
+	<div id="datePlugin"></div>
+	<script type="text/javascript" src="../js/jquery-1.11.1.min.js" ></script>
+	<script type="text/javascript" src="../js/public.js" ></script>
+	<script type="text/javascript" src="../js/date.js" ></script>
+	<script type="text/javascript" src="../js/iscroll.js" ></script>
+	<script>
+		$(function(){
+			$('#beginTime').val(getCurrentTime());
+			$('#beginTime').date();
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>注册成功</title>
+	<link rel="stylesheet" href="../../css/common.css" />
+	<style>
+		.success-btn button.back-btn{background:#11CD6E}
+	</style>
+</head>
+<body>
+	<header class="wrap-header">
+		<div class="nav-wrap-left">
+			<a class="back" href="javascript:history.back(-1)">
+				<i class="text-icon icon-back"></i>
+			</a>
+		</div>
+		<span class="nav-header">注册成功</span>
+	</header>
+	<div class="success-wrap">
+		<!--<div class="from-company">
+			<div class="success-tit">
+				<img src="../../img/chonggong.png" alt="注册成功" />
+				<h4>恭喜！注册成功！</h4>
+			</div>
+			<div class="success-btn">
+				<button class="close">关闭</button>
+				<button class="btn-com toOne">建立部门</button>
+			</div>
+		</div>-->
+		<div class="from-department">
+			<div class="success-tit">
+				<img src="../../img/chonggong.png" alt="注册成功" />
+				<h4>恭喜！注册成功！</h4>
+			</div>
+			<div class="success-btn">
+				<button class="btn-com toNext">继续建账号</button>
+				<button class="back-btn">返回我的商户</button>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../../js/jquery-1.11.1.min.js" ></script>
+	<script type="text/javascript" src="../../js/public.js" ></script>
+	<script>
+		//var user = getParams()['user'];
+		/*if(user){
+			if(user=='company'){
+				$('.from-company').show();
+				$('.from-department').hide();
+			}else if(user=='department'){
+				$('.from-company').hide();
+				$('.from-department').show();
+			}
+		}*/
+		/*$(".success-btn .close").click(function(){
+			if(is_weixn()){
+				WeixinJSBridge.call('closeWindow');
+			}else{
+				window.opener = null;
+			    window.open("", "_self");
+			    window.close();
+			}
+		});*/
+		$(".success-btn .back-btn").click(function(){
+			window.location.href = "myMerchant.html"
+		});
+		$(".success-btn .toNext").click(function(){
+			window.location.href = "addManager.html?level=000"
+		});
+	</script>
+</body>
+</html>

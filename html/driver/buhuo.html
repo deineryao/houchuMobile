@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>补货</title>
+	<link rel="stylesheet" href="../../css/common.css" />
+</head>
+<body class="tui-bg">
+	<header class="wrap-header">
+		<div class="nav-wrap-left">
+			<a class="back" href="javascript:history.back(-1)">
+				<i class="text-icon icon-back"></i>
+			</a>
+		</div>
+		<span class="nav-header">补货</span>
+	</header>
+	<section class="mt16">
+		<div class="tui-tit  tui-commn-tit padding-lr">
+			<label>货品名称：</label>
+			<span>小白菜(带泥)</span>
+		</div>
+		<div class="padding-lr clearfix">
+			<div class="tui-tit-name tui-commn-tit fl">补货数量<b class="star-color">*</b></div>
+			<!--<div class="tui-input">
+				<input class="tui-no tui-commn-box" type="text" placeholder="请填写补货数量" />
+			</div>-->
+			<div  style="width: 70%;height: 1rem;display: -webkit-box;-webkit-box-align: center;" class="fr"><div class="add-minus" id="buy-count" type="number"  min="0"  value="0"></div></div>
+		</div>
+		<div class="padding-lr">
+			<div class="tui-tit-name tui-commn-tit">货品单价<b class="star-color">*</b></div>
+			<div class="tui-input">
+				<input class="tui-no tui-commn-box" type="text" placeholder="请填写货品单价" />
+			</div>
+		</div>
+		<div class="padding-lr">
+			<div class="tui-tit-name tui-commn-tit">补货说明<b class="star-color">*</b></div>
+			<div class="tui-textarea">
+				<textarea class="tui-intro tui-commn-box" placeholder="请填写补货说明"></textarea>
+			</div>
+		</div>
+		<div class="padding-lr mt16">
+			<div class="tui-img">
+				上传现场照片 最多3张
+			</div>
+		</div>
+		<div class="padding-lr mt16">
+			<div>
+				<span class="img-span"><img src="../../img/544de502Nec294f22.jpg"></span>
+				<span class="img-span"><img src="../../img/544de502Nec294f22.jpg"></span>
+				<span class="img-span"><img src="../../img/544de502Nec294f22.jpg"></span>
+			</div>
+		</div>
+	</section>
+	<div class="public-bottom-btn submit-btn">
+		<button class="fix-btn">提交</button>
+	</div>
+	<script type="text/javascript" src="../../js/jquery-1.11.1.min.js" ></script>
+	<script type="text/javascript" src="../../js/number-input.js" ></script>
+	<script>
+	    $("#buy-count").numberInput();
+		$(".fix-btn").click(function(){
+			window.location.href = "order_detail.html?state=4"
+		});
+	</script>
+</body>
+</html>

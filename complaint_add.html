@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">	
+	<title>新增投诉</title>
+	<link rel="stylesheet" href="css/tousu.css" />
+</head>
+<body>
+	<header class="nav-header">
+		<div class="nav-header-left">
+			<a class="back" href="javascript:history.back(-1)">
+				<i class="text-icon icon-back"></i>
+			</a>
+		</div>
+		<span class="nav-text">新增投诉建议</span>
+	</header>
+	<div class="scroll-wrap">
+		<section class="new-tousu">
+			<div class="mer-list">
+			<label>投诉类型</label>
+			<div class="select-wrap">
+				<select>
+	                <option value="1" selected="selected">司机</option>
+	                <option value="2">缺货</option>
+	                <option value="3">朝阳区</option>
+	                <option value="4">海淀区</option>
+	                <option value="5">丰台区</option>
+	            </select>
+	        </div>    
+		</div>
+		<div class="mer-list">
+			<label>投诉内容</label>
+			<textarea class="tui-commn-box" type="text" placeholder="请填写投诉内容" /></textarea>
+		</div>
+		<div class="padding-lr mt16">
+			<div class="tui-img">
+				上传照片 最多5张
+			</div>
+		</div>
+		<div class="padding-lr mrt3">
+			<div class="all-pic">
+				<span class="img-span"><img src="img/chonggong.png"><i>×</i></span>
+				<span class="img-span"><img src="img/test.png"><i>×</i></span>
+				<span class="img-span"><img src="img/544de502Nec294f22.jpg"><i>×</i></span>
+			</div>
+		</div>
+		</section>
+	</div>
+	<div class="public-bottom-btn submit-btn">
+		<button class="fix-btn">提交</button>
+	</div>
+	<form method="post" enctype="multipart/form-data" id="upload-img-form">
+		<input type="file" id="upload-img" name="recipe" style="height:0px;width:0px;" accept="image/*"/>
+	</form>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+	<script>
+		$(".tui-img").click(function(){
+			if($(".all-pic .img-span").length >= 5){
+				return;
+			}
+			try{
+				$("#upload-img").click();
+			}catch(e){
+				console.log(e);
+			}
+		});
+		$('.all-pic').delegate('.img-span i','click',function(){
+			$(this).parent('.img-span').remove();
+		});
+	</script>
+</body>
+</html>
